@@ -1,0 +1,2 @@
+export const GET_CHANNELS = 'GET_CHANNELS';
+export const SAVE_CHANNELS = 'SAVE_CHANNELS';

@@ -1,0 +1,72 @@
+.title-h1 {
+  @include title-h1;
+}
+.title-h2 {
+  @include title-h2;
+}
+.title-h3 {
+  @include title-h3;
+}
+.title-h3-light {
+  @include title-h3-light;
+}
+.text-norm {
+  @include text-norm;
+}
+.text-small {
+  @include text-small;
+}
+.text-error {
+  @include text-error;
+}
+.btn-norm {
+  @include btn-norm;
+}
+.btn-border {
+  @include btn-border;
+}
+.btn-border-light {
+  @include btn-border-light;
+}
+.btn-big {
+  @include btn-big;
+}
+.link {
+  @include link;
+}
+.link-light {
+  @include link-light;
+}
+.link-big {
+  @include link-big;
+}
+.recaptcha {
+  margin-bottom: 40px;
+}
+.border-right {
+  @include border-right;
+}
+.input {
+  @include input;
+}
+.label-checkbox {
+  @include label-checkbox;
+}
+.mb-section {
+  @include mb-section;
+}
+.popup {
+  @include popup;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.multiselect {
+  @include multiselect;
+}
+.icon-close {
+  @include icon-close;
+}
+.icon-close-warning {
+  @include icon-close-warning;
+}

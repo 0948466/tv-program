@@ -1,0 +1,211 @@
+$w1920: 1920px;
+$w1000: 1000px;
+$desktop: 1100px;
+$w320: 320px;
+
+@mixin w1920 {
+  @media only screen and (min-width: #{$w1920}) {
+    @content;
+  }
+}
+
+@mixin wDesktop-1919 {
+  @media only screen and (min-width: #{$desktop}) and (max-width: #{$w1920 - 1px}) {
+    @content;
+  }
+}
+
+@mixin wDesktop {
+  @media only screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin w320-wDesktop {
+  @media only screen and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin w320-999 {
+  @media only screen and (max-width: #{$w1000 - 1px}) {
+    @content;
+  }
+}
+
+@mixin w1000 {
+  @media only screen and (min-width: #{$w1000}) {
+    @content;
+  }
+}
+
+@mixin w320-1299 {
+  @media only screen and (min-width: #{$w320}) and (max-width: 1299px) {
+    @content;
+  }
+}
+
+@mixin wDesktop-1299 {
+  @media only screen and (min-width: #{$desktop}) and (max-width: 1299px) {
+    @content;
+  }
+}
+
+@mixin w1300 {
+  @media only screen and (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin border-right {
+  border-right: dashed 1px #cfd8dc;
+}
+@mixin input {
+  @include text-norm;
+  padding-bottom: 10px;
+  width: 100%;
+  min-height: 45px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid $color-border;
+  color: $color-title;
+  outline: none;
+  &::placeholder {
+    @include text-norm;
+    color: $color-title;
+  }
+}
+@mixin label-checkbox {
+  @include text-norm;
+
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: solid 1px $color-border;
+  }
+
+  &_checked {
+    color: $color-title;
+    &::before {
+      background-color: $bg-color-btn;
+      border: none;
+      fill: #fff;
+      background-size: contain;
+
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+@mixin mb-section {
+  margin-bottom: 180px;
+@include w320-wDesktop {
+  margin-bottom: 40px;
+}
+}
+@mixin popup {
+  position: absolute;
+  padding: 60px 40px;
+  max-width: 570px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(38, 50, 56, 0.1);
+  background-color: #fff;
+  z-index: 5;
+}
+
+@mixin multiselect {
+  margin-bottom: 20px;
+  &__placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: $color-title;
+  }
+  &__tags {
+    padding-left: 0;
+    min-height: 45px;
+    border: none;
+    border-bottom: 1px solid $color-border;
+    border-radius: 0;
+  }
+  &__tag {
+    border-radius: 6px;
+    border: solid 1px $color-border;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: $color-title;
+  }
+  &__single {
+    padding-left: 0;
+  }
+  &__tag-icon {
+    &:hover {
+      background-color: $bg-color-btn;
+    }
+    &::after {
+      font-size: 15px;
+      color: $color-border;
+    }
+  }
+  &--above &__content-wrapper {
+    border-bottom: 1px solid #e8e8e8;
+  }
+  &__option--selected {
+    font-weight: normal;
+    background-color: $bg-color-btn;
+    outline: none;
+    color: #fff;
+    &::after {
+      color: #fff;
+    }
+  }
+
+  &__option--highlight {
+    background: #f9f9f9;
+    color: $color-text;
+    font-weight: 700;
+    &::after {
+      background: #f9f9f9;
+      font-weight: 700;
+      color: $color-text;
+    }
+  }
+}
+@mixin icon-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  background: url("~@/assets/images/icons/icon_close.svg") no-repeat center / cover;
+}
+
+@mixin icon-close-warning {
+  @include icon-close;
+  top: 10px;
+  right: 10px;
+}
+
+
+

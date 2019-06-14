@@ -1,0 +1,81 @@
+@mixin title-h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $color-title;
+  @include w320-wDesktop {
+    font-size: 28px;
+  }
+}
+
+@mixin title-h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $color-title;
+}
+
+@mixin title-h3 {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $color-title;
+}
+@mixin title-h3-light {
+  @include title-h3;
+  color: $color-light;
+}
+
+@mixin text-norm {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+  color: $color-text;
+}
+@mixin text-small {
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $color-text;
+}
+
+@mixin text-error {
+  color: $color-error;
+}
+
+@mixin link {
+  color: $color-link;
+  text-decoration: underline;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+@mixin link-light {
+  @include link;
+  color: $color-light;
+}
+@mixin link-big {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-btn-border;
+  &:hover {
+    color: $color-btn-border-hover;
+  }
+}
